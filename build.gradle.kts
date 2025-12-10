@@ -1,11 +1,11 @@
 plugins {
   id("java")
-  id("org.jetbrains.kotlin.jvm") version "2.2.20-RC"
-  id("org.jetbrains.intellij.platform") version "2.7.2"
+  id("org.jetbrains.kotlin.jvm") version "2.3.0-RC3"
+  id("org.jetbrains.intellij.platform") version "2.10.5"
 }
 
 group = "net.pandadev"
-version = "1.1.1"
+version = "1.1.2"
 
 repositories {
   mavenCentral()
@@ -18,7 +18,7 @@ repositories {
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
   intellijPlatform {
-    create("IC", "2025.2")
+    create("IU", "2025.3")
     testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
   }
 
@@ -29,7 +29,7 @@ intellijPlatform {
   pluginConfiguration {
     ideaVersion {
       sinceBuild = "242"
-      untilBuild = "252.*"
+      untilBuild = "253.*"
     }
 
     changeNotes = """
