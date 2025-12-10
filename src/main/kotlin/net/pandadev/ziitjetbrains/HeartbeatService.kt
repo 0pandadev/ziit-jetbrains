@@ -321,7 +321,7 @@ class HeartbeatService : ApplicationActivationListener {
             try {
                 val cal = Calendar.getInstance()
                 val currentOffsetMs = cal.timeZone.getOffset(System.currentTimeMillis())
-                val timezoneOffsetSeconds = -(currentOffsetMs / 1000)
+                val timezoneOffsetSeconds = (currentOffsetMs / 1000)
 
                 val url =
                     URI(
